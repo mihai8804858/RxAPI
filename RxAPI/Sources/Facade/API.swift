@@ -11,8 +11,12 @@ public final class API: APIType {
     private let service1Provider = Service1Provider()
     private let service2Provider = Service2Provider()
 
+    let resourceContainer = SharedRequestContainer<Response<TestModel>>()
+
     public func getResource() -> Observable<Response<TestModel>> {
-        return service1Provider.requestModel(request: Service1(TestModelTarget()))
+        return resourceContainer.source(for: TestModelTarget.self) {
+            service1Provider.requestModel(request: Service1(TestModelTarget()))
+        }
     }
 
     public func getResource(withID id: String) -> Observable<Response<TestModel>> {

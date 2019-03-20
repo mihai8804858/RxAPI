@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17CEE33C224243F200BE2FEB /* RxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CEE332224243F200BE2FEB /* RxAPI.framework */; };
-		17CEE341224243F200BE2FEB /* RxAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE340224243F200BE2FEB /* RxAPITests.swift */; };
+		17CEE341224243F200BE2FEB /* RxAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE340224243F200BE2FEB /* RxAPIIntegrationTests.swift */; };
 		17CEE34F2242440C00BE2FEB /* RxAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 17CEE34D2242440C00BE2FEB /* RxAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17CEE359224244C700BE2FEB /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE358224244C700BE2FEB /* Target.swift */; };
 		17CEE35B224244CF00BE2FEB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE35A224244CF00BE2FEB /* Request.swift */; };
@@ -40,6 +40,10 @@
 		17CEE39622425CFE00BE2FEB /* AnotherTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39222425CFE00BE2FEB /* AnotherTestModel.swift */; };
 		17CEE39822425CFE00BE2FEB /* Service2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39422425CFE00BE2FEB /* Service2.swift */; };
 		17CEE39A22425FDF00BE2FEB /* PostResourceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39922425FDF00BE2FEB /* PostResourceTarget.swift */; };
+		17CEE39C2242608900BE2FEB /* SharedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39B2242608900BE2FEB /* SharedRequest.swift */; };
+		17CEE39E2242617D00BE2FEB /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39D2242617D00BE2FEB /* MockAPI.swift */; };
+		17CEE3A0224261F300BE2FEB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CEE39F224261F300BE2FEB /* Helpers.swift */; };
+		17CEE3A22242638E00BE2FEB /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CEE3A12242638E00BE2FEB /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,7 @@
 /* Begin PBXFileReference section */
 		17CEE332224243F200BE2FEB /* RxAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17CEE33B224243F200BE2FEB /* RxAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17CEE340224243F200BE2FEB /* RxAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAPITests.swift; sourceTree = "<group>"; };
+		17CEE340224243F200BE2FEB /* RxAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		17CEE34D2242440C00BE2FEB /* RxAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxAPI.h; sourceTree = "<group>"; };
 		17CEE34E2242440C00BE2FEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17CEE3522242441F00BE2FEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +89,10 @@
 		17CEE39222425CFE00BE2FEB /* AnotherTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherTestModel.swift; sourceTree = "<group>"; };
 		17CEE39422425CFE00BE2FEB /* Service2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service2.swift; sourceTree = "<group>"; };
 		17CEE39922425FDF00BE2FEB /* PostResourceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResourceTarget.swift; sourceTree = "<group>"; };
+		17CEE39B2242608900BE2FEB /* SharedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRequest.swift; sourceTree = "<group>"; };
+		17CEE39D2242617D00BE2FEB /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		17CEE39F224261F300BE2FEB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		17CEE3A12242638E00BE2FEB /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CEE3A22242638E00BE2FEB /* Nimble.framework in Frameworks */,
 				17CEE36F22424D8100BE2FEB /* RxBlocking.framework in Frameworks */,
 				17CEE37022424D8100BE2FEB /* RxTest.framework in Frameworks */,
 				17CEE36922424D8100BE2FEB /* Result.framework in Frameworks */,
@@ -147,7 +156,9 @@
 		17CEE33F224243F200BE2FEB /* RxAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				17CEE340224243F200BE2FEB /* RxAPITests.swift */,
+				17CEE39F224261F300BE2FEB /* Helpers.swift */,
+				17CEE39D2242617D00BE2FEB /* MockAPI.swift */,
+				17CEE340224243F200BE2FEB /* RxAPIIntegrationTests.swift */,
 				17CEE3512242441F00BE2FEB /* SupportingFiles */,
 			);
 			path = RxAPITests;
@@ -192,6 +203,7 @@
 				17CEE3752242506A00BE2FEB /* Response.swift */,
 				17CEE379224250F300BE2FEB /* APIError.swift */,
 				17CEE37B2242512400BE2FEB /* Cancelable.swift */,
+				17CEE39B2242608900BE2FEB /* SharedRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 		17CEE36022424D7100BE2FEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17CEE3A12242638E00BE2FEB /* Nimble.framework */,
 				17CEE36D22424D8100BE2FEB /* RxBlocking.framework */,
 				17CEE36E22424D8100BE2FEB /* RxTest.framework */,
 				17CEE36422424D7100BE2FEB /* Result.framework */,
@@ -421,6 +434,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -432,6 +446,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,6 +472,7 @@
 				17CEE378224250DF00BE2FEB /* Provider.swift in Sources */,
 				17CEE37C2242512400BE2FEB /* Cancelable.swift in Sources */,
 				17CEE3762242506A00BE2FEB /* Response.swift in Sources */,
+				17CEE39C2242608900BE2FEB /* SharedRequest.swift in Sources */,
 				17CEE3872242556000BE2FEB /* Service1.swift in Sources */,
 				17CEE3852242552200BE2FEB /* API.swift in Sources */,
 				17CEE39822425CFE00BE2FEB /* Service2.swift in Sources */,
@@ -471,7 +487,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17CEE341224243F200BE2FEB /* RxAPITests.swift in Sources */,
+				17CEE39E2242617D00BE2FEB /* MockAPI.swift in Sources */,
+				17CEE3A0224261F300BE2FEB /* Helpers.swift in Sources */,
+				17CEE341224243F200BE2FEB /* RxAPIIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
