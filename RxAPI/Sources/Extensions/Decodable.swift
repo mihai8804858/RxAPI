@@ -11,7 +11,7 @@ extension Response where Model == Data {
     }
 }
 
-extension Result where Value == DataResponse, Error == APIError {
+extension Result where Value == Response<Data>, Error == APIError {
     func tryDecode<D: Decodable>(_ type: D.Type) -> Result<Response<D>, APIError> {
         return flatMap { $0.tryDecode(type) }
     }
