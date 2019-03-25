@@ -1,4 +1,4 @@
-import Dispatch
+import Foundation
 
 protocol Cancellable {
     var isCancelled: Bool { get }

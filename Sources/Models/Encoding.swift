@@ -1,3 +1,5 @@
+import Foundation
+
 protocol ParameterEncoding {
     func encode(request: URLRequest, with parameters: [String: Any]) -> URLRequest
 }

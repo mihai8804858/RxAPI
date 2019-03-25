@@ -1,3 +1,5 @@
+import Foundation
+
 protocol RequestType {
     var baseURL: URL { get }
     var target: TargetType { get }

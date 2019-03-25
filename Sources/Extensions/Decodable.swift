@@ -1,3 +1,4 @@
+import Foundation
 import Result
 
 extension Response where Model == Data {
